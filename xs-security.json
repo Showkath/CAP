@@ -1,0 +1,86 @@
+{
+  "xsappname": "vmsbackend",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.WALLDORF",
+      "description": "WALLDORF Desc"
+    },
+    {
+      "name": "$XSAPPNAME.BANGALORE",
+      "description": "BANGALORE Desc"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "level",
+      "description": "level",
+      "valueType": "int",
+	  "valueRequired" : false	
+    },
+    {
+      "name": "type",
+      "description": "type",
+      "valueType": "string",
+	  "valueRequired" : false	
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Admin_WALLDORF",
+      "description": "Admin for WALLDORF",
+      "scope-references": [
+        "$XSAPPNAME.WALLDORF"
+      ]
+    },
+	 {
+      "name": "EBC_WALLDORF",
+      "description": "Read Write access for WALLDORF for few apps",
+      "scope-references": [
+        "$XSAPPNAME.WALLDORF"
+      ]
+    },
+	 {
+      "name": "Receptionist_WALLDORF",
+      "description": "Read Write access for WALLDORF for few apps",
+      "scope-references": [
+        "$XSAPPNAME.WALLDORF"
+      ]
+    },
+     {
+      "name": "Reports_WALLDORF",
+      "description": "View Permisions for WALLDORF",
+      "scope-references": [
+        "$XSAPPNAME.WALLDORF"
+      ]
+    },
+   {
+      "name": "Admin_BANGALORE",
+      "description": "Read Write access Admin for BANGALORE",
+      "scope-references": [
+        "$XSAPPNAME.BANGALORE"
+      ]
+    },
+	 {
+      "name": "EBC_BANGALORE",
+      "description": "Read Write access for WALLDORF for few apps",
+      "scope-references": [
+        "$XSAPPNAME.WALLDORF"
+      ]
+    },
+	 {
+      "name": "Receptionist_BANGALORE",
+      "description": "Read Write access for WALLDORF for few apps",
+      "scope-references": [
+        "$XSAPPNAME.WALLDORF"
+      ]
+    },
+     {
+      "name": "Reports_BANGALORE",
+      "description": "View Permisions for BANGALORE",
+      "scope-references": [
+        "$XSAPPNAME.BANGALORE"
+      ]
+    }
+  ]
+}
